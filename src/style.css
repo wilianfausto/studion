@@ -5,8 +5,10 @@
 }
 
 :root {
+    --color-primary /*variavel para ser reutilizada em qualquer situação*/: #ffc500;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+
 }
 
 body {
@@ -44,6 +46,10 @@ li {
     color: #fff;
     text-decoration: none;
 
+}
+
+.navbar__links a:hover /*utilizado para sombras*/ {
+    color: var(--color-primary);
 }
 
 
