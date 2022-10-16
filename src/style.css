@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /*impostação fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap'); /*impostação fontes */
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,8 @@
 }
 
 body {
-    margin: 0
+    margin: 0;
+    padding-top: 7.75rem;
 }
 
 ul {
@@ -21,9 +22,6 @@ ul {
     padding: 0;
 }
 
-li {
-    margin-right: .625rem;
-}
 
 .navbar { /*link para classe sempre utiliza ponto*/
     position: fixed;
@@ -32,8 +30,12 @@ li {
     align-items: center;
     top: 0;
     left: 0;
+
     padding: 0rem 1.5rem;
     width: 100vw;
+    height: 7.75rem;
+    padding: 0;
+
     background-color: #000; 
     color: #fff;
 }
@@ -42,13 +44,36 @@ li {
     justify-self: end;
 }
 
+.navbar__links li {
+    margin-right: 3rem;
+    font-size: .875rem;
+    text-transform: uppercase;
+}
+
 .navbar__links a {
     color: #fff;
     text-decoration: none;
-
+    
 }
 
 .navbar__links a:hover /*utilizado para sombras*/ {
+    color: var(--color-primary);
+}
+
+.logo-studion {
+    font-size: 2.375rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1ch; /*relativo ao tamanho da altura do glifo 0 da fonte*/
+    text-align: right;
+}
+
+.logo-studion__subtitle {
+    font-size: .875rem;
+    font-weight: 300;
+}
+
+.copy--primary {
     color: var(--color-primary);
 }
 
