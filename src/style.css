@@ -77,4 +77,14 @@ ul {
     color: var(--color-primary);
 }
 
+header {
+    margin:0;
+}
+
+#slider {
+    height: calc(43.75rem - 7.75rem);
+    background-color: #000;
+    color: #fff;
+}
+
 
