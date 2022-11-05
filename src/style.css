@@ -5,10 +5,10 @@
 }
 
 :root {
-    --color-primary /*variavel para ser reutilizada em qualquer situação*/: #ffc500;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-
+    --color-primary /*variavel para ser reutilizada em qualquer situação*/: #ffc500;
+    --default-padding: 1rem
 }
 
 body {
@@ -30,12 +30,9 @@ ul {
     align-items: center;
     top: 0;
     left: 0;
-
-    padding: 0rem 1.5rem;
+    padding: var(--default-padding), 1.5rem;
     width: 100vw;
     height: 7.75rem;
-    padding: 0;
-
     background-color: #000; 
     color: #fff;
 }
@@ -61,6 +58,7 @@ ul {
 }
 
 .logo-studion {
+    margin: var(--default-padding);
     font-size: 2.375rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -77,13 +75,14 @@ ul {
     color: var(--color-primary);
 }
 
-header {
-    margin:0;
-}
-
 #slider {
-    height: calc(43.75rem - 7.75rem);
+    height: calc(100vh - 7.75rem);
+    padding: var(--default-padding);
     background-color: #000;
+    background-image: url(./images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #fff;
 }
 
