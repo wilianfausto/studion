@@ -7,7 +7,7 @@
 :root {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    --color-primary /*variavel para ser reutilizada em qualquer situação*/: #ffc500;
+    --color-primary: #ffc500; /*variavel para ser reutilizada em qualquer situação*/
     --default-padding: 1rem
 }
 
@@ -25,7 +25,7 @@ ul {
 
 .navbar { /*link para classe sempre utiliza ponto*/
     position: fixed;
-    z-index: 1;
+    z-index: 1; /*usado para sequenciar os elementos de pagina*/
     display: grid;
     grid-template-columns: 1fr 9fr;
     align-items: center;
@@ -89,8 +89,8 @@ ul {
 .slide__background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover; /*  */
+    object-position: center; /*centralizar imagem*/
 }
 
 .slide__copy {
@@ -103,7 +103,7 @@ ul {
     font-size: .9375rem;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: .1875rem;
+    letter-spacing: .1875rem; /*espaçamento entre caracteres*/
 
 }
 
@@ -119,14 +119,14 @@ ul {
 
 .btn {
     cursor: pointer;
-    padding: 1.25rem 2.5rem;
-    border: .125rem solid #fff;
+    padding: 1rem 2.5rem;
+    border: .125rem solid #fff; 
     border-radius: 5rem;
     color: var(--color-primary);
-    background: unset;
+    background: unset; /*transparecer fundo do botão*/
     font-size: .9375rem;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: uppercase; /*texto em caixa alta*/
     transition: 0.5s all ease;
     
 }
@@ -136,6 +136,29 @@ ul {
 .btn:focus {
     border-color: var(--color-primary);
     background-color: var(--color-primary);
+    color: #fff;    
+}
+
+#counter {
+    background-color: var(--color-primary);
     color: #fff;
-    
+    text-transform: uppercase; /*texto em caixa alta*/
+}
+
+.counter__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(300px,   1fr)); /*divid o grid conforme o numero de colunas informado, repeat repete*/
+    place-items: center;
+    margin: 0;
+    padding: 4.375rem var(--default-padding);    
+}
+
+.counter__container h3 {
+    font-size: 2.1875rem;
+}
+
+.counter__container h3 small {
+    display: block;
+    font-size: 1.25rem;
 }
