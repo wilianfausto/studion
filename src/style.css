@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap'); /*impostação fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,6 +8,7 @@
 :root {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    color: #333;
     --color-primary: #ffc500; /*variavel para ser reutilizada em qualquer situação*/
     --default-padding: 1rem
 }
@@ -14,6 +16,12 @@
 body {
     margin: 0;
     padding-top: 7.75rem;
+}
+
+header,
+main,
+footer {
+    overflow: hidden;
 }
 
 ul {
@@ -50,8 +58,7 @@ ul {
 
 .navbar__links a {
     color: #fff;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 
 .navbar__links a:hover /*utilizado para sombras*/ {
@@ -104,7 +111,6 @@ ul {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .1875rem; /*espaçamento entre caracteres*/
-
 }
 
 .slide__copy h2 {
@@ -127,8 +133,7 @@ ul {
     font-size: .9375rem;
     font-weight: 700;
     text-transform: uppercase; /*texto em caixa alta*/
-    transition: 0.5s all ease;
-    
+    transition: 0.5s all ease;  
 }
 
 .btn:hover,
@@ -147,11 +152,10 @@ ul {
 
 .counter__container {
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(3, minmax(300px,   1fr)); /*divid o grid conforme o numero de colunas informado, repeat repete*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*divid o grid conforme o numero de colunas informado, repeat repete*/
     place-items: center;
     margin: 0;
-    padding: 4.375rem var(--default-padding);    
+    padding: 4.375rem 1rem;    
 }
 
 .counter__container h3 {
@@ -162,3 +166,34 @@ ul {
     display: block;
     font-size: 1.25rem;
 }
+
+.institutional {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 4.375rem;
+}
+
+.institutional__copy {
+    padding: 0 1.875rem;
+}
+
+.institutional__copy h6 {
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.institutional__copy h4 {
+    font-size: 1.5625rem;
+    margin-top: 1rem;
+}
+
+.institutional p {
+    font-size: 1.8625rem;
+    line-height: 1.6875rem;
+}
+
+.btn
