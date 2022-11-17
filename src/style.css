@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap'); /*impostação fontes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto&display=swap')
 
 * {
     box-sizing: border-box;
@@ -8,9 +7,11 @@
 :root {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    color: #333;
+    --color-copy: #333;         
     --color-primary: #ffc500; /*variavel para ser reutilizada em qualquer situação*/
-    --default-padding: 1rem
+    --default-padding: 1rem;
+    color: var(--color-copy);
+    
 }
 
 body {
@@ -137,8 +138,9 @@ ul {
 }
 
 .btn:hover,
-.btn:active
-.btn:focus {
+.btn:active,
+.btn:focus,
+.btn--institutional {
     border-color: var(--color-primary);
     background-color: var(--color-primary);
     color: #fff;    
@@ -169,7 +171,7 @@ ul {
 
 .institutional {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 44rem auto;
     align-items: center;
     padding: 4.375rem;
 }
@@ -192,8 +194,15 @@ ul {
 }
 
 .institutional p {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.8625rem;
     line-height: 1.6875rem;
+    margin-bottom: 0;
+    margin-bottom: 2.5rem;
 }
 
-.btn
+.btn--institutional:hover {
+    color: var(--color-copy);
+    background: unset;
+    border-color: var(--color-copy);
+}
