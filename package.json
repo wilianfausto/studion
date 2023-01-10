@@ -1,0 +1,28 @@
+{
+  "name": "studion",
+  "version": "1.0.0",
+  "description": "My First Project",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server src/ --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilianfausto/studion.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "author": "Wilian César Filipe Fausto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilianfausto/studion/issues"
+  },
+  "homepage": "https://github.com/wilianfausto/studion#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
