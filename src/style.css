@@ -1,208 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    --color-copy: #333;         
-    --color-primary: #ffc500; /*variavel para ser reutilizada em qualquer situação*/
-    --default-padding: 1rem;
-    color: var(--color-copy);
-    
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  --color-copy: #333;
+  --color-primary: #ffc500; /*variavel para ser reutilizada em qualquer situação*/
+  --default-padding: 1rem;
+  color: var(--color-copy);
 }
 
 body {
-    margin: 0;
-    padding-top: 7.75rem;
+  margin: 0;
+  padding-top: 7.75rem;
 }
 
 header,
 main,
 footer {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 1; /*usado para sequenciar os elementos de pagina*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
 
-.navbar { /*link para classe sempre utiliza ponto*/
-    position: fixed;
-    z-index: 1; /*usado para sequenciar os elementos de pagina*/
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-    align-items: center;
-    top: 0;
-    left: 0;
-    padding: var(--default-padding), 1.5rem;
-    width: 100vw;
-    height: 7.75rem;
-    background-color: #000; 
-    color: #fff;
+.navbar__container {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+  padding: var(--default-padding), 1.5rem;
+  width: 100vw;
+  height: 7.75rem;
 }
 
 .navbar__links {
-    justify-self: end;
+  justify-self: end;
 }
 
 .navbar__links li {
-    margin-right: 3rem;
-    font-size: .875rem;
-    text-transform: uppercase;
+  margin-right: 3rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
 }
 
 .navbar__links a {
-    color: #fff;
-    text-decoration: none;    
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar__links a:hover /*utilizado para sombras*/ {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .logo-studion {
-    margin: var(--default-padding);
-    font-size: 2.375rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1ch; /*relativo ao tamanho da altura do glifo 0 da fonte*/
-    text-align: right;
+  margin: var(--default-padding);
+  font-size: 2.375rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1ch; /*relativo ao tamanho da altura do glifo 0 da fonte*/
+  text-align: right;
 }
 
 .logo-studion__subtitle {
-    font-size: .875rem;
-    font-weight: 300;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .copy--primary {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 #slider {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .slide {
-    position: relative;
-    height: calc(100vh - 7.75rem);
+  position: relative;
+  height: calc(100vh - 7.75rem);
 }
 
 .slide__background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*  */
-    object-position: center; /*centralizar imagem*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*  */
+  object-position: center; /*centralizar imagem*/
 }
 
 .slide__copy {
-    position: absolute;
-    top: 6.25rem;
-    left: 50vw;
+  position: absolute;
+  top: 5.25rem;
+  left: 50vw;
 }
 
 .slide__copy h6 {
-    font-size: .9375rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .1875rem; /*espaçamento entre caracteres*/
+  font-size: 0.9375rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem; /*espaçamento entre caracteres*/
 }
 
 .slide__copy h2 {
-    font-size: 6.25rem;
-    text-transform: uppercase;
-    line-height: 6.25rem;
+  font-size: 6.25rem;
+  text-transform: uppercase;
+  line-height: 6.25rem;
 }
 
 .slide__copy h2 span {
-    display: block;
+  display: block;
 }
 
 .btn {
-    cursor: pointer;
-    padding: 1rem 2.5rem;
-    border: .125rem solid #fff; 
-    border-radius: 5rem;
-    color: var(--color-primary);
-    background: unset; /*transparecer fundo do botão*/
-    font-size: .9375rem;
-    font-weight: 700;
-    text-transform: uppercase; /*texto em caixa alta*/
-    transition: 0.5s all ease;  
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  border: 0.125rem solid #fff;
+  border-radius: 5rem;
+  color: var(--color-primary);
+  background: unset; /*transparecer fundo do botão*/
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase; /*texto em caixa alta*/
+  transition: 0.5s all ease;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus,
 .btn--institutional {
-    border-color: var(--color-primary);
-    background-color: var(--color-primary);
-    color: #fff;    
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 #counter {
-    background-color: var(--color-primary);
-    color: #fff;
-    text-transform: uppercase; /*texto em caixa alta*/
+  background-color: var(--color-primary);
+  color: #fff;
+  text-transform: uppercase; /*texto em caixa alta*/
 }
 
 .counter__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*divid o grid conforme o numero de colunas informado, repeat repete*/
-    place-items: center;
-    margin: 0;
-    padding: 4.375rem 1rem;    
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /*divid o grid conforme o numero de colunas informado, repeat repete*/
+  place-items: center;
+  padding: 1.375rem 1rem;
 }
 
 .counter__container h3 {
-    font-size: 2.1875rem;
+  font-size: 2.1875rem;
 }
 
 .counter__container h3 small {
-    display: block;
-    font-size: 1.25rem;
+  display: block;
+  font-size: 1.25rem;
 }
 
 .institutional {
-    display: grid;
-    grid-template-columns: 44rem auto;
-    align-items: center;
-    padding: 4.375rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3.125rem;
+  align-items: center;
+  padding: 4.375rem;
+}
+
+.institutional__image {
+  max-width: 550px;
 }
 
 .institutional__copy {
-    padding: 0 1.875rem;
+  padding: 0 1.875rem;
 }
 
 .institutional__copy h6 {
-    font-size: .875rem;
-    font-weight: 300;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    margin: 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .institutional__copy h4 {
-    font-size: 1.5625rem;
-    margin-top: 1rem;
+  font-size: 1.5625rem;
+  margin-top: 1rem;
 }
 
 .institutional p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.8625rem;
-    line-height: 1.6875rem;
-    margin-bottom: 0;
-    margin-bottom: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6875rem;
+  margin-bottom: 0;
+  margin-bottom: 2.5rem;
 }
 
 .btn--institutional:hover {
-    color: var(--color-copy);
-    background: unset;
-    border-color: var(--color-copy);
+  color: var(--color-copy);
+  background: unset;
+}
+
+.quote {
+  background-image: url(./images/parallax.jpg);
+  min-height: 80vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
